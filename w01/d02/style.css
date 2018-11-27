@@ -1,0 +1,28 @@
+h1,h2 {
+    color: goldenrod;
+    font-weight: lighter;
+}
+
+body {
+margin: 15px;
+}
+div{
+    color: blue;
+}
+
+#comments-title {
+    color: red;
+}
+
+div.crazy  {
+   background-color: yellow;
+}
+
+li.super-cool {
+  border: 2px solid red;
+}
+
+div > p {
+    
+}
+

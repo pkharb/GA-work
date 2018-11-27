@@ -1,0 +1,82 @@
+/* BODY */
+
+body { 
+    background-color: #eee;
+}
+
+/* FORM CONTAINER */
+
+.form-container {
+    padding: 20px 25%;
+}
+
+.form-container h1 {
+    text-align: center;
+    color: lightslategray;
+}
+
+/* FORM STYLES */
+
+input[name="name"] {
+    grid-area: name;
+}
+
+input[name="email"] {
+    grid-area: email;
+}
+
+input[name="subject"] {
+    grid-area: subject;
+}
+
+textarea {
+     grid-area: message;
+}
+
+input[type="submit"] {
+     grid-area: submit;
+}
+
+form {
+    display: grid;
+    grid-template-areas:
+        'name message'
+        'email message'
+        'subject message'
+        'submit submit';
+    grid-gap: 15px;
+    padding: 10px;
+}
+
+form input, form textarea {
+    border-radius: 10px;
+    border-color: transparent;
+    padding: 15px;
+}
+
+form input::placeholder, form textarea::placeholder {
+    color: lightslategray;
+}
+
+form input[type="submit"] {
+    background-color: green;
+    color: white;
+}
+
+/* Responsiveness */
+
+@media only screen and (max-width: 750px) {
+    form {
+        display: grid;
+        grid-template-areas: 
+            'name'
+            'email'
+            'subject'
+            'message'
+            'submit'
+    }
+
+    .form-container {
+        padding: 20px 10%;
+    }
+}
