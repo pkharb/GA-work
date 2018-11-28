@@ -24,7 +24,7 @@ var currentTurn = player1;
 
 // console.log(b1);
 board.addEventListener('click', function(evt){
-    // console.log(evt);
+    //console.log(evt);
     evt.target.innerText = currentTurn; 
     if(currentTurn === player1){
         currentTurn = player2;
@@ -32,7 +32,6 @@ board.addEventListener('click', function(evt){
     else{
         currentTurn = player1;
     }
-    
     
 });
 
