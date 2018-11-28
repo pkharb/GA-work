@@ -13,13 +13,12 @@ var board = document.querySelector('.container')
 var b1 = document.querySelector('.box-1');
 var reset = document.querySelector('#but1');
 var nextPlayer = document.querySelector('#top');
-//console.log(reset);
 
 
 var player1 = "X";
 var player2 = "O";
 var currentTurn = player1;
-
+// nextPlayer = player1; 
 
 
 // console.log(b1);
@@ -28,9 +27,13 @@ board.addEventListener('click', function(evt){
     evt.target.innerText = currentTurn; 
     if(currentTurn === player1){
         currentTurn = player2;
+        nextPlayer.innerText = `The next player is ${player2}`;
+        console.log(nextPlayer);
+
     }
     else{
         currentTurn = player1;
+        nextPlayer.innerText = (`The next player is ${player1}` );
     }
     
 });
