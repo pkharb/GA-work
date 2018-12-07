@@ -11,31 +11,31 @@
 
 var board = document.querySelector('.container')
 var b1 = document.querySelector('.box-1');
+var b2 = document.querySelector('.box-2');
+var b3 = document.querySelector('.box-3');
+
 var reset = document.querySelector('#but1');
 var nextPlayer = document.querySelector('#top');
-
 
 var player1 = "X";
 var player2 = "O";
 var currentTurn = player1;
-// nextPlayer = player1; 
 
-
-// console.log(b1);
 board.addEventListener('click', function(evt){
-    //console.log(evt);
     evt.target.innerText = currentTurn; 
     if(currentTurn === player1){
         currentTurn = player2;
         nextPlayer.innerText = `The next player is ${player2}`;
-        console.log(nextPlayer);
-
+        b1.innerText = player1;
     }
-    else{
+    else if(currentTurn === player2){
         currentTurn = player1;
         nextPlayer.innerText = (`The next player is ${player1}` );
     }
-    
+    else if(b1.innerText === player1 && b2.innerText === player1 && b3.innerText === player1){
+        console.log(b1.innerText === player1);
+        nextPlayer.innerText = (`The winner is ${player1}` );
+    }
 });
 
 // console.log(board.children.length);
@@ -46,3 +46,4 @@ reset.addEventListener('click', function() {
     
     currentTurn = player1;
 })
+

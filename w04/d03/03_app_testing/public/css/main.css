@@ -1,0 +1,13 @@
+body{
+    background: #eee;
+}
+
+#info{
+    height: 400px;
+    background: #fff;
+}
+
+#map{
+    height: 400px;
+    background: #aaa;
+}
